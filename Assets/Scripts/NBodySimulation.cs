@@ -3,21 +3,21 @@ using UnityEngine;
 public class NBodySimulation : MonoBehaviour
 {
     public float timeStep = 60f; // 1 minute per step
-    private Body[] bodies = new Body[2];
-    public Body Moon;
-    public Body Earth;
+    private Body[] bodies;
     public float positionScale = 1e7f; // 1 Unity unit = 1e7 meters
+    public GameObject errands;
 
     void Start()
     {
-        bodies[0] = Moon;
-        bodies[1] = Earth;
+        bodies = new Body[errands.transform.childCount];
+        for(int i = 0; i< errands.transform.childCount; i++){
+            bodies[i] = errands.transform.GetChild(i).GetComponent<Body>();
+        }
     }
 
     void FixedUpdate()
     {
         foreach (var b in bodies) b.force = Vector3.zero;
-
         for (int i = 0; i < bodies.Length; i++)
         {
             for (int j = i + 1; j < bodies.Length; j++)
@@ -37,7 +37,9 @@ public class NBodySimulation : MonoBehaviour
     {
         Vector3 diff = b.transform.position - a.transform.position;
 
-        float distUnity = diff.magnitude + 1e-5f;
+       float distUnity = diff.magnitude + 1e-5f;
+      //  float distUnity = Mathf.Max(diff.magnitude, 0.001f);
+
         float distMeters = distUnity * positionScale; // convert to meters
         Vector3 forceDir = diff.normalized;
 
