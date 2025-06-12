@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d0faa00e662c2409b263c35e20cb0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0.00025, y: 0, z: 0}
+  velocity: {x: -0.00024, y: 0, z: 0}
   mass: 6.4e+23
   force: {x: 0, y: 0, z: 0}
 --- !u!135 &52598102
@@ -532,7 +532,7 @@ Transform:
   m_GameObject: {fileID: 195368767}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2872}
+  m_LocalPosition: {x: 0, y: 0, z: 28724.6}
   m_LocalScale: {x: 255, y: 255, z: 255}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -666,7 +666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d0faa00e662c2409b263c35e20cb0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0.00005, y: 0, z: 0}
+  velocity: {x: -0.000068, y: 0, z: 0}
   mass: 8.694e+25
   force: {x: 0, y: 0, z: 0}
 --- !u!135 &195368771
@@ -907,7 +907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d0faa00e662c2409b263c35e20cb0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0.0003, y: 0, z: 0}
+  velocity: {x: -0.00035, y: 0, z: 0}
   mass: 4.8e+24
   force: {x: 0, y: 0, z: 0}
 --- !u!135 &202049663
@@ -1014,7 +1014,7 @@ Transform:
   m_GameObject: {fileID: 211549949}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4495}
+  m_LocalPosition: {x: 0, y: 0, z: 44950.6}
   m_LocalScale: {x: 246, y: 246, z: 246}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1148,7 +1148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d0faa00e662c2409b263c35e20cb0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0.00005, y: 0, z: 0}
+  velocity: {x: -0.000054, y: 0, z: 0}
   mass: 1e+26
   force: {x: 0, y: 0, z: 0}
 --- !u!135 &211549953
@@ -1384,6 +1384,7 @@ Transform:
   - {fileID: 1688191139}
   - {fileID: 1314621060}
   - {fileID: 202049660}
+  - {fileID: 1810838315}
   - {fileID: 1417474438}
   - {fileID: 52598099}
   - {fileID: 1809294131}
@@ -1524,12 +1525,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944919885}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00033560395, y: 0.9955034, z: -0.09465717, w: 0.0035835505}
-  m_LocalPosition: {x: 0.16226938, y: 2.264947, z: 7.961792}
-  m_LocalScale: {x: 0.057803467, y: 0.05780347, z: 0.05780347}
+  m_LocalRotation: {x: 0.065997474, y: 0.26033324, z: -0.017763415, w: 0.96309686}
+  m_LocalPosition: {x: -1515.2712, y: 412.78156, z: -2131.816}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1864578861}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &944919890
 MonoBehaviour:
@@ -1543,7 +1544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce8ecb2c5623eb24986066d5d7c08cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3000
+  moveSpeed: 1000
   mouseSensitivity: 2
 --- !u!114 &944919891
 MonoBehaviour:
@@ -1558,7 +1559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 0}
-  mass: 0
+  mass: 0.000001
   force: {x: 0, y: 0, z: 0}
 --- !u!1 &997832577
 GameObject:
@@ -1724,7 +1725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d0faa00e662c2409b263c35e20cb0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0.00008, y: 0, z: 0}
+  velocity: {x: -0.000097, y: 0, z: 0}
   mass: 5.694e+26
   force: {x: 0, y: 0, z: 0}
 --- !u!135 &997832581
@@ -1882,7 +1883,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.2
+  m_Time: 70
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -1965,7 +1966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d0faa00e662c2409b263c35e20cb0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0.0007, y: 0, z: 0}
+  velocity: {x: -0.00047, y: 0, z: 0}
   mass: 3.3e+23
   force: {x: 0, y: 0, z: 0}
 --- !u!135 &1314621063
@@ -2195,7 +2196,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1417474438
 Transform:
   m_ObjectHideFlags: 0
@@ -2209,7 +2210,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1810838315}
   - {fileID: 1864578861}
   m_Father: {fileID: 755583352}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2226,7 +2226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStep: 60
-  positionScale: 10000000
+  positionScale: 50000
   maxAllowedVelocity: 100000
   errands: {fileID: 1417474437}
 --- !u!114 &1417474440
@@ -2241,7 +2241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d0faa00e662c2409b263c35e20cb0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0.00023, y: 0, z: 0}
+  velocity: {x: -0.00031, y: 0, z: 0}
   mass: 5.97e+24
   force: {x: 0, y: 0, z: 0}
 --- !u!1 &1514698570
@@ -2636,7 +2636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d0faa00e662c2409b263c35e20cb0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0.0000002, z: 0}
   mass: 1.99e+30
   force: {x: 0, y: 0, z: 0}
 --- !u!135 &1688191136
@@ -2723,7 +2723,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.22266321, y: -0.2713941, z: 0.06469133, w: 0.93412066}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 330, y: 330, z: 330}
+  m_LocalScale: {x: 695.99994, y: 695.99994, z: 695.99994}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 755583352}
@@ -2973,7 +2973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d0faa00e662c2409b263c35e20cb0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0.0001, y: 0, z: 0}
+  velocity: {x: -0.00013, y: 0, z: 0}
   mass: 1.894e+27
   force: {x: 0, y: 0, z: 0}
 --- !u!135 &1809294134
@@ -3080,12 +3080,12 @@ Transform:
   m_GameObject: {fileID: 1810838314}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1496}
   m_LocalScale: {x: 63, y: 63, z: 63}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1514698571}
-  m_Father: {fileID: 1417474438}
+  m_Father: {fileID: 755583352}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!96 &1810838316
 TrailRenderer:
@@ -3215,7 +3215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d0faa00e662c2409b263c35e20cb0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0.00023, y: 0, z: 0}
+  velocity: {x: -0.00028, y: 0, z: 0}
   mass: 5.97e+24
   force: {x: 0, y: 0, z: 0}
 --- !u!135 &1810838318
@@ -3325,7 +3325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d0faa00e662c2409b263c35e20cb0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0.0001, y: 0, z: 0}
+  velocity: {x: 0.2, y: 0, z: 0}
   mass: 7.3e+22
   force: {x: 0, y: 0, z: 0}
 --- !u!135 &1864578858
@@ -3411,11 +3411,10 @@ Transform:
   m_GameObject: {fileID: 1864578856}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 70.61}
+  m_LocalPosition: {x: 0, y: 0, z: 70}
   m_LocalScale: {x: 17.3, y: 17.3, z: 17.3}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 944919889}
+  m_Children: []
   m_Father: {fileID: 1417474438}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!96 &1864578862
@@ -3710,6 +3709,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 500418821}
   - {fileID: 1880861061}
+  - {fileID: 944919889}
   - {fileID: 755583352}
   - {fileID: 703886874}
   - {fileID: 89346020}
