@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class NBodySimulation : MonoBehaviour
 {
-    public float timeStep = 60f; // 1 minute per step
-    private Body[] bodies;
-    public float positionScale = 1e7f; // 1 Unity unit = 1e7 meters
+    public float timeStep = 60f;
+    public float positionScale = 1e7f;
+    public float maxAllowedVelocity = 1e5f;
     public GameObject errands;
+    private Body[] bodies;
 
     void Start()
     {
         bodies = new Body[errands.transform.childCount];
-        for(int i = 0; i< errands.transform.childCount; i++){
+        for (int i = 0; i < errands.transform.childCount; i++)
+        {
             bodies[i] = errands.transform.GetChild(i).GetComponent<Body>();
         }
     }
@@ -18,6 +20,7 @@ public class NBodySimulation : MonoBehaviour
     void FixedUpdate()
     {
         foreach (var b in bodies) b.force = Vector3.zero;
+
         for (int i = 0; i < bodies.Length; i++)
         {
             for (int j = i + 1; j < bodies.Length; j++)
@@ -28,6 +31,14 @@ public class NBodySimulation : MonoBehaviour
 
         foreach (var b in bodies)
         {
+            if (!float.IsFinite(b.velocity.x) || !float.IsFinite(b.transform.position.x))
+            {
+                Debug.LogError($"{b.name} has invalid physics state. Skipping update.");
+                b.velocity = Vector3.zero;
+                continue;
+            }
+
+            b.velocity = Vector3.ClampMagnitude(b.velocity, maxAllowedVelocity);
             b.velocity += (b.force / b.mass) * timeStep;
             b.transform.position += b.velocity * timeStep;
         }
@@ -36,24 +47,16 @@ public class NBodySimulation : MonoBehaviour
     void ApplyGravity(Body a, Body b)
     {
         Vector3 diff = b.transform.position - a.transform.position;
+        float distUnity = Mathf.Max(diff.magnitude, 1f); // avoid divide-by-zero
+        float distMeters = distUnity * positionScale;
 
-       float distUnity = diff.magnitude + 1e-5f;
-      //  float distUnity = Mathf.Max(diff.magnitude, 0.001f);
-
-        float distMeters = distUnity * positionScale; // convert to meters
         Vector3 forceDir = diff.normalized;
-
         float G = 6.67430e-11f;
         float forceMag = G * a.mass * b.mass / (distMeters * distMeters);
 
-        Vector3 force = forceDir * (forceMag / positionScale); // scale back to Unity units
+        Vector3 force = forceDir * (forceMag / positionScale);
 
         a.force += force;
-        b.force -= force; 
+        b.force -= force;
     }
 }
-
-
-
-
-
