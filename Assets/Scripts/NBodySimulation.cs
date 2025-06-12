@@ -20,12 +20,11 @@ public class NBodySimulation : MonoBehaviour
     void FixedUpdate()
     {
         foreach (var b in bodies) b.force = Vector3.zero;
-
         for (int i = 0; i < bodies.Length; i++)
         {
             for (int j = i + 1; j < bodies.Length; j++)
             {
-                ApplyGravity(bodies[i], bodies[j]);
+                bodies[i].applyGravity(bodies[j]);
             }
         }
 
@@ -42,21 +41,5 @@ public class NBodySimulation : MonoBehaviour
             b.velocity += (b.force / b.mass) * timeStep;
             b.transform.position += b.velocity * timeStep;
         }
-    }
-
-    void ApplyGravity(Body a, Body b)
-    {
-        Vector3 diff = b.transform.position - a.transform.position;
-        float distUnity = Mathf.Max(diff.magnitude, 1f); // avoid divide-by-zero
-        float distMeters = distUnity * positionScale;
-
-        Vector3 forceDir = diff.normalized;
-        float G = 6.67430e-11f;
-        float forceMag = G * a.mass * b.mass / (distMeters * distMeters);
-
-        Vector3 force = forceDir * (forceMag / positionScale);
-
-        a.force += force;
-        b.force -= force;
     }
 }
